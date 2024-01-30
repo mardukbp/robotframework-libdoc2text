@@ -2,18 +2,20 @@
 
 {{doc}}
 
-{% for keyword in keywords %}
-## {{keyword.name}}
+## <a id="Keywords"/>Keywords
 
-### Arguments
+{% for keyword in keywords %}
+### {{keyword.name}}
+
+#### Arguments
 
 | Name | Default value |
 |------|---------------|
 {% for arg in keyword.args -%}
-|{{arg.name}}|{{arg.type}}|
+|{{arg.name}}|{{arg.defaultValue}}|
 {% endfor %}
 
-### Documentation
+#### Documentation
 
 {{keyword.doc}}
 
