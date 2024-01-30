@@ -1,0 +1,27 @@
+= {{name}}
+
+++++
+{{doc}}
+++++
+
+{% for keyword in keywords %}
+== {{keyword.name}}
+
+=== Arguments
+
+|===
+|Name |Default value
+{% for arg in keyword.args %}
+|{{arg.name}}
+|{{arg.type}}
+
+{% endfor %}
+|===
+
+=== Documentation
+
+++++
+{{keyword.doc}}
+++++
+
+{% endfor %}
